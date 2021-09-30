@@ -1,7 +1,8 @@
-// Some of mjia's code was used for help 
+// Some of mjia's example "apperance" code was used as reference for helping to code this 
+// code is modified and changed to fit the program i am trying to create 
 
 PVector berry, berry2;
-boolean distance, distance2, distance3 = false;
+boolean distance, distance2 = false;
 
 void setup() {
  size(800,600,P2D);
@@ -12,6 +13,8 @@ void setup() {
 
 void draw() {
  background(200);
+ fill(0);
+ rect(mouseX,mouseY,25,25);
  berryMove();
  berryColor();
 }
@@ -31,9 +34,6 @@ void berryMove() {
    berry2.x = random(width); 
    berry2.y = random(height); 
   }
-  
- fill(0);
- rect(mouseX,mouseY,25,25);
   
 } 
 
