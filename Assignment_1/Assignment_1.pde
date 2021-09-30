@@ -1,31 +1,30 @@
-// A square will eat the circle and will delete it 
+// Some of mjia's code was used for help 
 
-float bacteriaX;
-float bacteriaY;
-float moveX = 10;
-float moveY = 10;
+PVector berry;
+boolean distance = false;
 
-void setup () {
- size(640,640,P2D); 
- bacteriaX = 50;
- bacteriaY = 50;
+void setup() {
+ size(800,600,P2D);
+ berry = new PVector(width/2, height/2);
+ ellipseMode(CENTER);
 }
 
-void draw () {
-  background(100);
-  fill(255,255,0);
-  ellipse(bacteriaX,bacteriaY,25,25);
+void draw() {
+ background(200);
+ berryCommand();
+}
 
-  bacteriaX = bacteriaX + moveX;
-  if (bacteriaX > width || bacteriaX < 0){
-   moveX = moveX * -1;
+void berryCommand() {
+  PVector mousePosition = new PVector(mouseX,mouseY);
+  distance = berry.dist(mousePosition) < 20;
+  
+  if (distance){
+   berry.x = random(width); 
+   berry.y = random(height); 
   }
   
   fill(255,0,0);
-  rect(mouseX,mouseY,50,50);
+  ellipse(berry.x,berry.y,25,25);
+  ellipse(berry.x + 100,berry.y + 100,25,25);
   
-  fill(255);
-  line(0,50,width,50);
-}
-
-// use stuff from previous lecture and the coding train to create a creature 
+} 
