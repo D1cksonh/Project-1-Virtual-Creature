@@ -55,20 +55,18 @@ void berryMove() { // code to change the location of the berry when it is close 
 } 
 
 void berryColor() { //code to modify the color of the and positions of the berries 
-  fill(255,0,0);
   noStroke();
+  
+  fill(255,0,0);
   ellipse(berry.x,berry.y,25,25);
   
   fill(0,255,0);
-  noStroke();
   ellipse(berry2.x,berry2.y,25,25);
   
   fill(0,0,255);
-  noStroke();
   ellipse(berry3.x,berry3.y,25,25);
   
   fill(255,0,255);
-  noStroke();
   ellipse(berry4.x,berry4.y,25,25);
 }
 
