@@ -5,7 +5,7 @@ PVector berry, berry2, berry3, berry4;
 boolean distance, distance2, distance3, distance4 = false;
 
 void setup() {
- size(800,600);
+ size(800,600, P2D);
  berry = new PVector(width/2, height/2);
  berry2 = new PVector(500, 450);
  berry3 = new PVector(100, 100);
