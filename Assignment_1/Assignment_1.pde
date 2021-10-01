@@ -15,10 +15,7 @@ void setup() {
 
 void draw() {
  background(24,155,33);
- fill(0);
- stroke(0);
  rectMode(CENTER);
- rect(mouseX,mouseY,25,25);
  
  berryMove();
  berryColor();
@@ -57,7 +54,7 @@ void berryMove() { // code to change the location of the berry when it is close 
   
 } 
 
-void berryColor(){ //code to modify the color of the and positions of the berries 
+void berryColor() { //code to modify the color of the and positions of the berries 
   fill(255,0,0);
   noStroke();
   ellipse(berry.x,berry.y,25,25);
@@ -73,7 +70,6 @@ void berryColor(){ //code to modify the color of the and positions of the berrie
   fill(255,0,255);
   noStroke();
   ellipse(berry4.x,berry4.y,25,25);
-  
 }
 
 void bunny() { // "creature" code 
