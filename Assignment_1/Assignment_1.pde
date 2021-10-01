@@ -3,6 +3,8 @@
 
 PVector berry, berry2, berry3, berry4;
 boolean distance, distance2, distance3, distance4 = false;
+int bodyWidth = 50;
+int bodyHeight = 25;
 
 void setup() {
  size(800,600, P2D);
@@ -19,37 +21,42 @@ void draw() {
  
  berryMove();
  berryColor();
- bunny();
+ bunny(bodyWidth, bodyHeight);
  }
 
 void berryMove() { // code to change the location of the berry when it is close to the mouse
   PVector mousePosition = new PVector(mouseX,mouseY);
-  PVector mousePosition2 = new PVector(mouseX,mouseY);
-  PVector mousePosition3 = new PVector(mouseX,mouseY);
-  PVector mousePosition4 = new PVector(mouseX,mouseY);
   distance = berry.dist(mousePosition) < 20;
-  distance2 = berry2.dist(mousePosition2) < 20;
-  distance3 = berry3.dist(mousePosition3) < 20;
-  distance4 = berry4.dist(mousePosition4) < 20;
+  distance2 = berry2.dist(mousePosition) < 20;
+  distance3 = berry3.dist(mousePosition) < 20;
+  distance4 = berry4.dist(mousePosition) < 20;
   
   if (distance){
    berry.x = random(width); 
    berry.y = random(height); 
+   bodyWidth += 5;
+   bodyHeight += 5;
   }
   
   if (distance2){
    berry2.x = random(width); 
    berry2.y = random(height); 
+   bodyWidth += 5;
+   bodyHeight += 5;
   }
   
   if (distance3){
    berry3.x = random(width); 
    berry3.y = random(height); 
+   bodyWidth += 5;
+   bodyHeight += 5;
   }
   
   if (distance4){
    berry4.x = random(width); 
    berry4.y = random(height); 
+   bodyWidth += 5;
+   bodyHeight += 5;
   }
   
 } 
@@ -70,11 +77,11 @@ void berryColor() { //code to modify the color of the and positions of the berri
   ellipse(berry4.x,berry4.y,25,25);
 }
 
-void bunny() { // "creature" code 
+void bunny(int bodyWidth, int bodyHeight) { // "creature" code 
   fill(255);
   noStroke();
-  rect(mouseX + 35, mouseY - 20 ,20 ,20); //head
-  rect(mouseX,mouseY,50,25); // body
+  rect(mouseX + 35 , mouseY - 20 ,20 ,20); //head
+  rect(mouseX,mouseY, bodyWidth, bodyHeight); // body
   rect(mouseX + 26 ,mouseY - 35 ,5 ,15); // left ear
   rect(mouseX + 48 ,mouseY - 35 ,5 ,15); // right ear
   rect(mouseX - 22, mouseY + 20,5,15); // left leg
@@ -87,4 +94,6 @@ void bunny() { // "creature" code
   
   fill(0);
   rect(mouseX + 35, mouseY - 16,10,3);// mouth 
+  
+  println(bodyWidth);
 }
