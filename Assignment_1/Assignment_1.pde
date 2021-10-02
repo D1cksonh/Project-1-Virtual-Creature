@@ -17,7 +17,7 @@ void setup() {
 
 void draw() {
  background(24,155,33);
- rectMode(CENTER); //<- unsure to remove
+ rectMode(CENTER); 
  
  bunny(bodyWidth, bodyHeight);
  enviorment();
