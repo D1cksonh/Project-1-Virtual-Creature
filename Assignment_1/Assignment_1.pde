@@ -107,8 +107,16 @@ void bunny(int bodyWidth, int bodyHeight) { // "creature" code
 void enviorment() { // code to generate the enviorment 
   fill(137,69,27);
   noStroke();
-  rect(400,300,25,50);
+  rect(400,300,25,50); // middle tree
+  rect(100,150,25,50);// top left tree
+  rect(150,500,25,50);// bottom left tree
+  rect(600,450,25,50);// bottom right tree
+  rect(700,150,25,50);// top right tree
   
   fill(0,255,0);
-  triangle(450,300,410,200, 370,300);
+  triangle(350,300,400,200,450,300); // middle tree
+  triangle(150,150,100,50, 50,150); // top left tree 
+  triangle(100,500,150,400,200,500); // bottom left tree
+  triangle(550,450,600,350,650,450);// bottom right tree
+  triangle(650,150,700,50, 750,150);// top right tree
 }
