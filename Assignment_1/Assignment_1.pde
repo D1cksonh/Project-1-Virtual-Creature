@@ -5,7 +5,6 @@ PVector berry, berry2, berry3, berry4;
 boolean distance, distance2, distance3, distance4 = false;
 int bodyWidth = 50;
 int bodyHeight = 25;
-int moveBack = 3;
 
 void setup() {
  size(800,600, P2D);
@@ -37,7 +36,6 @@ void berryMove() { // code to change the location of the berry when it is close 
    berry.y = random(height); 
    bodyWidth += 5;
    bodyHeight += 5;
-   moveBack += 2;
   }
   
   if (distance2){
@@ -91,8 +89,8 @@ void bunny(int bodyWidth, int bodyHeight) { // "creature" code
   rect(mouseX + 43 + (bodyWidth-50), mouseY - 35 - (bodyHeight-25), 5 + bodyWidth-50, 15 + bodyHeight-25); // right ear
   
   fill(24,155,33);
-  rect(mouseX, mouseY + 20 + bodyHeight-25, 5 + bodyWidth-50, 15 + bodyHeight-25); // leg seperators 
-  rect(mouseX + 35 + (bodyWidth-50), mouseY - 35 - (bodyHeight-25), 5 + bodyWidth-50, 15 + bodyHeight-25);//ear seperator 
+  rect(mouseX, mouseY + 20 + bodyHeight-25, 5 + bodyWidth-50, 15 + bodyHeight-25); // leg separator
+  rect(mouseX + 35 + (bodyWidth-50), mouseY - 35 - (bodyHeight-25), 5 + bodyWidth-50, 15 + bodyHeight-25);//ear separator
   
   fill(255);
   rect(mouseX + 35 + (bodyWidth-50), mouseY - 20 - (bodyHeight-25), 20 + bodyWidth-50, 20 + bodyHeight-25); //head 
