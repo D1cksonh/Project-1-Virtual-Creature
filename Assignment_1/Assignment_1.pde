@@ -12,12 +12,12 @@ void setup() {
  berry2 = new PVector(500, 450);
  berry3 = new PVector(100, 100);
  berry4 = new PVector(50,500);
- //ellipseMode(CENTER);
+ //ellipseMode(CENTER); //<- i think you can remove this 
 }
 
 void draw() {
  background(24,155,33);
- //rectMode(CENTER);
+ //rectMode(CENTER); //<- unsure to remove
  
  enviorment();
  berryMove();
