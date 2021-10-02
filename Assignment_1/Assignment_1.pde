@@ -17,12 +17,12 @@ void setup() {
 
 void draw() {
  background(24,155,33);
- //rectMode(CENTER); //<- unsure to remove
+ rectMode(CENTER); //<- unsure to remove
  
+ bunny(bodyWidth, bodyHeight);
  enviorment();
  berryMove();
  berryColor();
- bunny(bodyWidth, bodyHeight);
  }
 
 void berryMove() { // code to change the location of the berry when it is close to the mouse
