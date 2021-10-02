@@ -20,7 +20,7 @@ void draw() {
  rectMode(CENTER); 
  
  bunny(bodyWidth, bodyHeight);
- enviorment();
+ environment();
  berryMove();
  berryColor();
  }
@@ -104,7 +104,7 @@ void bunny(int bodyWidth, int bodyHeight) { // "creature" code
   rect(mouseX + 35 + (bodyWidth-50), mouseY - 16 - (bodyHeight-25), 10, 3);// mouth 
 }
 
-void enviorment() { // code to generate the enviorment 
+void environment() { // code to generate the enviorment 
   fill(137,69,27);
   noStroke();
   rect(400,300,25,50); // middle tree
