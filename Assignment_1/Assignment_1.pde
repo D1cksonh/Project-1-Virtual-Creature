@@ -80,13 +80,13 @@ void berryColor() { //code to modify the color of the and positions of the berri
 void bunny(int bodyWidth, int bodyHeight) { // "creature" code 
   fill(255);
   noStroke();
-  rect(mouseX + 35 + bodyWidth-50, mouseY - 20, 20, 20); //head 
+  rect(mouseX + 35 + (bodyWidth-50), mouseY - 20 - (bodyHeight-25), 20 + bodyWidth-50, 20 + bodyHeight-25); //head 
   rect(mouseX,mouseY, bodyWidth, bodyHeight); // body
-  rect(mouseX + 26 ,mouseY - 35 , 5, 15); // left ear
+  rect(mouseX + 26 ,mouseY - 35 , 5 , 15); // left ear
   rect(mouseX + 48 ,mouseY - 35 , 5, 15); // right ear
-  rect(mouseX - 22, mouseY + 20, 5, 15); // left leg
-  rect(mouseX + 22, mouseY + 20,5,15); // right leg
-  ellipse(mouseX -32, mouseY - 15 ,15,15); // tail 
+  rect(mouseX - 22, mouseY + 20 + bodyHeight-25, 5 + bodyWidth-50, 15 + bodyHeight-25); // left leg
+  rect(mouseX + 22, mouseY + 20, 5 + bodyWidth-50, 15 + bodyHeight-25); // right leg
+  ellipse(mouseX - 32 - (bodyWidth-50), mouseY - 15 ,15 + bodyWidth-50 ,15 + bodyHeight-25); // tail 
   
   //fill(255,0,0);
   //ellipse(mouseX + 30, mouseY - 23 , 5 ,5); // left eye
