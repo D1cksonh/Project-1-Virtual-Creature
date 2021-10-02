@@ -12,13 +12,14 @@ void setup() {
  berry2 = new PVector(500, 450);
  berry3 = new PVector(100, 100);
  berry4 = new PVector(50,500);
- ellipseMode(CENTER);
+ //ellipseMode(CENTER);
 }
 
 void draw() {
  background(24,155,33);
- rectMode(CENTER);
+ //rectMode(CENTER);
  
+ enviorment();
  berryMove();
  berryColor();
  bunny(bodyWidth, bodyHeight);
@@ -103,6 +104,11 @@ void bunny(int bodyWidth, int bodyHeight) { // "creature" code
   rect(mouseX + 35 + (bodyWidth-50), mouseY - 16 - (bodyHeight-25), 10, 3);// mouth 
 }
 
-void enviorment() {
+void enviorment() { // code to generate the enviorment 
+  fill(137,69,27);
+  noStroke();
+  rect(400,300,25,50);
   
+  fill(0,255,0);
+  triangle(450,300,410,200, 370,300);
 }
