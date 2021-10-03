@@ -12,7 +12,6 @@ void setup() {
  berry2 = new PVector(500, 450);
  berry3 = new PVector(100, 100);
  berry4 = new PVector(50,500);
- //ellipseMode(CENTER); //<- i think you can remove this 
 }
 
 void draw() {
@@ -97,11 +96,17 @@ void bunny(int bodyWidth, int bodyHeight) { // "creature" code
   rect(mouseX + 35 + (bodyWidth-50), mouseY - 20 - (bodyHeight-25), 20 + bodyWidth-50, 20 + bodyHeight-25); //head 
   
   fill(255,0,0);
-  ellipse(mouseX + 30 + (bodyWidth-50), mouseY - 23 - (bodyHeight-25), 5, 5); // left eye
-  ellipse(mouseX + 40 + (bodyWidth-50), mouseY - 23 - (bodyHeight-25), 5, 5); // right eye
+  rect(mouseX + 30 + (bodyWidth-50), mouseY - 23 - (bodyHeight-25), 5 + (bodyWidth-50), 5 + (bodyHeight-25)); // left eye
+  rect(mouseX + 40 + (bodyWidth-50), mouseY - 23 - (bodyHeight-25), 5 + (bodyWidth-50), 5 + (bodyHeight-25)); // right eye
+  //ellipse(mouseX + 30 + (bodyWidth-50), mouseY - 23 - (bodyHeight-25), 5, 5); // left eye
+  //ellipse(mouseX + 40 + (bodyWidth-50), mouseY - 23 - (bodyHeight-25), 5, 5); // right eye
+  
+  fill(255);
+  rect(mouseX + 35 + (bodyWidth-50), mouseY - 23 - (bodyHeight-25), 5, 5 + (bodyHeight-25)); // middle eye line
+  rect(mouseX + 35 + (bodyWidth-50), mouseY - 10 - (bodyHeight-25), 20 + (bodyWidth-50), 5 + (bodyHeight-25)); // bottom eye line
   
   fill(0);
-  rect(mouseX + 35 + (bodyWidth-50), mouseY - 16 - (bodyHeight-25), 10, 3);// mouth 
+  rect(mouseX + 35 + (bodyWidth-50), mouseY - 16 - (bodyHeight-25), 10 + (bodyWidth-50), 3);// mouth 
 }
 
 void environment() { // code to generate the enviorment 
