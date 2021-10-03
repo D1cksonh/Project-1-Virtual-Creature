@@ -1,5 +1,5 @@
-// Some of mjia's example called "apperance" was used as reference to help code this
-// code is modified and changed drastically to fit the program i am trying to create 
+// Game:
+// You are controlling the creature to eat 
 
 PVector berry, berry2, berry3, berry4;
 boolean distance, distance2, distance3, distance4 = false;
@@ -91,8 +91,6 @@ void bunny(int bodyWidth, int bodyHeight) { // "creature" code
   fill(255,0,0);
   rect(mouseX + 30 + (bodyWidth-50), mouseY - 23 - (bodyHeight-25), 5 + (bodyWidth-50), 5 + (bodyHeight-25)); // left eye
   rect(mouseX + 40 + (bodyWidth-50), mouseY - 23 - (bodyHeight-25), 5 + (bodyWidth-50), 5 + (bodyHeight-25)); // right eye
-  //ellipse(mouseX + 30 + (bodyWidth-50), mouseY - 23 - (bodyHeight-25), 5, 5); // left eye
-  //ellipse(mouseX + 40 + (bodyWidth-50), mouseY - 23 - (bodyHeight-25), 5, 5); // right eye
   
   fill(255);
   rect(mouseX + 35 + (bodyWidth-50), mouseY - 23 - (bodyHeight-25), 5, 5 + (bodyHeight-25)); // middle eye line
