@@ -5,6 +5,7 @@ PVector berry, berry2, berry3, berry4;
 boolean distance, distance2, distance3, distance4 = false;
 int bodyWidth = 50;
 int bodyHeight = 25;
+int scoreX = 0;
 
 void setup() {
  size(800,600, P2D);
@@ -22,6 +23,7 @@ void draw() {
  environment();
  berryMove();
  berryColor();
+ words();
  }
 
 void berryMove() { // code to change the location of the berry when it is close to the mouse
@@ -36,6 +38,7 @@ void berryMove() { // code to change the location of the berry when it is close 
    berry.y = random(height); 
    bodyWidth += 5;
    bodyHeight += 5;
+   scoreX = scoreX + 1;
   }
   
   if (distance2){
@@ -43,6 +46,7 @@ void berryMove() { // code to change the location of the berry when it is close 
    berry2.y = random(height); 
    bodyWidth += 5;
    bodyHeight += 5;
+   scoreX = scoreX + 1;
   }
   
   if (distance3){
@@ -50,6 +54,7 @@ void berryMove() { // code to change the location of the berry when it is close 
    berry3.y = random(height); 
    bodyWidth += 5;
    bodyHeight += 5;
+   scoreX = scoreX + 1;
   }
   
   if (distance4){
@@ -57,6 +62,7 @@ void berryMove() { // code to change the location of the berry when it is close 
    berry4.y = random(height); 
    bodyWidth += 5;
    bodyHeight += 5;
+   scoreX = scoreX + 1;
   }
  
 } 
@@ -82,8 +88,8 @@ void bunny(int bodyWidth, int bodyHeight) { // "creature" code
   rect(mouseX + 43 + (bodyWidth-50), mouseY - 35 - (bodyHeight-25), 5 + bodyWidth-50, 15 + bodyHeight-25); // right ear
   
   fill(24,155,33);
-  rect(mouseX, mouseY + 20 + bodyHeight-25, 5 + bodyWidth-50, 15 + bodyHeight-25); // leg separator
-  rect(mouseX + 35 + (bodyWidth-50), mouseY - 35 - (bodyHeight-25), 5 + bodyWidth-50, 15 + bodyHeight-25);//ear separator
+  rect(mouseX, mouseY + 20 + bodyHeight-25, 1 + bodyWidth-50, 15 + bodyHeight-25); // leg separator
+  rect(mouseX + 35 + (bodyWidth-50), mouseY - 35 - (bodyHeight-25), 1 + bodyWidth-50, 15 + bodyHeight-25);//ear separator
   
   fill(255);
   rect(mouseX + 35 + (bodyWidth-50), mouseY - 20 - (bodyHeight-25), 20 + bodyWidth-50, 20 + bodyHeight-25); //head 
@@ -115,4 +121,11 @@ void environment() { // code to generate the enviorment
   triangle(100,500,150,400,200,500); // bottom left tree
   triangle(550,450,600,350,650,450);// bottom right tree
   triangle(650,150,700,50, 750,150);// top right tree
+}
+
+void words () {
+  fill(0);
+  textSize(20);
+  text(scoreX,180,26); // scoring system
+  text("Amount Eaten =",20,25); // text
 }
