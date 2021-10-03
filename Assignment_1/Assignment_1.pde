@@ -1,5 +1,5 @@
 // Game:
-// You are controlling the creature to eat 
+// You are controlling the creature to ea
 
 PVector berry, berry2, berry3, berry4;
 boolean distance, distance2, distance3, distance4 = false;
