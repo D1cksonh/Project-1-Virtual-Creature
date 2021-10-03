@@ -63,17 +63,10 @@ void berryMove() { // code to change the location of the berry when it is close 
 
 void berryColor() { //code to modify the color of the and positions of the berries 
   noStroke();
-  
-  fill(255,0,0);
+  fill(209,0,0);
   ellipse(berry.x,berry.y,25,25);
-  
-  fill(0,255,0);
   ellipse(berry2.x,berry2.y,25,25);
-  
-  fill(0,0,255);
   ellipse(berry3.x,berry3.y,25,25);
-  
-  fill(255,0,255);
   ellipse(berry4.x,berry4.y,25,25);
 }
 
@@ -103,7 +96,7 @@ void bunny(int bodyWidth, int bodyHeight) { // "creature" code
   
   fill(255);
   rect(mouseX + 35 + (bodyWidth-50), mouseY - 23 - (bodyHeight-25), 5, 5 + (bodyHeight-25)); // middle eye line
-  rect(mouseX + 35 + (bodyWidth-50), mouseY - 10 - (bodyHeight-25), 20 + (bodyWidth-50), 5 + (bodyHeight-25)); // bottom eye line
+  rect(mouseX + 35 + (bodyWidth-50), mouseY - 8 - (bodyHeight-25), 20 + (bodyWidth-50), 5 + (bodyHeight-25)); // bottom eye line
   
   fill(0);
   rect(mouseX + 35 + (bodyWidth-50), mouseY - 16 - (bodyHeight-25), 10 + (bodyWidth-50), 3);// mouth 
