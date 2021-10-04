@@ -1,5 +1,5 @@
-// Game:
-// You are controlling the creature to ea
+// What is this Game:
+// You are the creature, you control the creature by moving the cursor around the screen eating berries, when you eat a berry you get bigger.
 
 PVector berry, berry2, berry3, berry4;
 boolean distance, distance2, distance3, distance4 = false;
@@ -123,7 +123,7 @@ void environment() { // code to generate the enviorment
   triangle(650,150,700,50, 750,150);// top right tree
 }
 
-void words () {
+void words () { // code for the text on the top left corner 
   fill(0);
   textSize(20);
   text(scoreX,180,26); // scoring system
