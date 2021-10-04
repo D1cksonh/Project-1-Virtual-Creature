@@ -10,7 +10,7 @@ int scoreX = 0;
 void setup() {
  size(800,600, P2D);
  berry = new PVector(width/2, height/2);
- berry2 = new PVector(500, 450);
+ berry2 = new PVector(500, 450); // PVector code was referenced and used from mjia (TA's) example called apperance, mjia's code was modified to fit my program and what im trying to make  
  berry3 = new PVector(100, 100);
  berry4 = new PVector(50,500);
 }
@@ -28,8 +28,8 @@ void draw() {
 
 void berryMove() { // code to change the location of the berry when it is close to the mouse
   PVector mousePosition = new PVector(mouseX,mouseY);
-  distance = berry.dist(mousePosition) < 20;
-  distance2 = berry2.dist(mousePosition) < 20;
+  distance = berry.dist(mousePosition) < 20; // mouse distance code was taken from mjia (TA's) example called apperance,  mjia's code was modified to fit my program and what im trying to make 
+  distance2 = berry2.dist(mousePosition) < 20; 
   distance3 = berry3.dist(mousePosition) < 20;
   distance4 = berry4.dist(mousePosition) < 20;
   
